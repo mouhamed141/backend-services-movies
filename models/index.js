@@ -1,15 +1,15 @@
-const dbConfig = require("../config/db.config.js");
+const dbConfig = require('../config/db.config.js')
 
-const mongoose = require("mongoose");
+const mongoose = require('mongoose')
 
-mongoose.Promise = global.Promise;
+mongoose.Promise = global.Promise
 
-const db = {};
+const db = {}
 
-db.mongoose = mongoose;
+db.mongoose = mongoose
 
-db.url = dbConfig.url;
+db.url = dbConfig.url
 
-db.students = require("./student.model.js")(mongoose);
+db.movies = require('./movie.model.js')(mongoose)
 
-module.exports = db;
+module.exports = db
